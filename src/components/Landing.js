@@ -6,7 +6,7 @@ import button from 'img/landing/button.png';
 import buttonPush from 'img/landing/buttonPush.png';
 import sauce from 'img/landing/sauce.png';
 
-export default function Landing({ history }) {
+export default function Landing() {
   const [hover, setHover] = useState(false);
   return (
     <LandingStyle>
@@ -38,6 +38,9 @@ export default function Landing({ history }) {
             </div>
           </Link>
         </div>
+        <div className="typo-s2 bold mt-1 chrome">
+          이 사이트는 크롬 브라우저에 최적화 되어있습니다. 크롬 브라우저 이용을 권장드립니다.
+        </div>
       </div>
     </LandingStyle>
   );
@@ -47,7 +50,6 @@ const LandingStyle = styled.div`
   background-color: #be3827;
   width: 100%;
   height: 100vh;
-  font-weight: 200;
   color: white;
   display: flex;
   justify-content: center;
@@ -62,29 +64,37 @@ const LandingStyle = styled.div`
   .content {
     text-align: center;
     .main {
-      font-size: 70px;
+      font-size: 4.3rem;
       line-height: 1.2;
       margin-top: 3rem;
+      font-weight: 100;
     }
     .sub {
+      font-weight: 300;
       line-height: 1.5;
       margin-bottom: 5rem;
       margin-top: 1rem;
     }
     .btnWrapper {
-      width: 150px;
+      width: 9.375rem;
       height: auto;
       display: inline-block;
       img {
-        width: 150px;
-        height: 150px;
-      }
-      .text {
-        margin-top: -95px;
-        color: #461009;
-        font-weight: bold;
-        font-size: 25px;
+        width: 9.375rem;
+        height: 9.375rem;
       }
     }
+  }
+  .chrome{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    color: #be3827;
+    padding: 0.25rem 1rem;
+    box-shadow: 0 0px 3px 0px rgba(0,0,0,0.2);
+    @media (max-width: 839px) {
+    display: none;
+  }
   }
 `;
