@@ -2,10 +2,18 @@ html{
   font-family: 'Spoqa Han Sans', '나눔고딕', NanumGothic, '맑은 고딕', Malgun Gothic, '애플 SD 산돌고딕 Neo', Apple SD Gothic Neo, '돋움', Dotum, '굴림';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  @media (min-width: 480px) and (max-width: 839px) {
+    font-size: 0.875rem;
+  }
+  @media (max-width: 479px) {
+    font-size: 0.75rem;
+  } 
 }
 
 body {
   margin: 0;
+  user-select: none;
 }
 
 code {
@@ -13,7 +21,19 @@ code {
     monospace;
 }
 
+div{
+  box-sizing: border-box;
+}
 
+button{
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Spoqa Han Sans', '나눔고딕', NanumGothic, '맑은 고딕', Malgun Gothic, '애플 SD 산돌고딕 Neo', Apple SD Gothic Neo, '돋움', Dotum, '굴림';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 // padding & margin
 .no-padding {
@@ -31,7 +51,6 @@ $list-direction: (
   "l": "left",
 );
 $list-size: 0 1 2 3 4 5;
-
 @each $direction-short, $direction in $list-direction {
   @each $size in $list-size {
     .p#{$direction-short}-#{$size} {
@@ -42,3 +61,108 @@ $list-size: 0 1 2 3 4 5;
     }
   }
 }
+
+.pointer{
+  cursor: pointer;
+}
+
+.relative{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
+.flex{
+  display: flex;
+}
+.inline-block{
+  display: inline-block;
+}
+.block{
+  display: block;
+}
+.bold{
+  font-weight: 700;
+}
+.regular{
+  font-weight: 400;
+}
+.light{
+  font-weight: 300;
+}
+.thin{
+  font-weight: 100;
+}
+.typo-s3{
+  font-size: 10px;
+}
+.typo-s2{
+  font-size: 12px;
+}
+.typo-s1{
+  font-size: 14px;
+}
+.typo-b1{
+  font-size: 18px;
+}
+.typo-b2{
+  font-size: 20px;
+}
+.typo-b3{
+  font-size: 24px;
+}
+.center{
+  text-align: center;
+}
+
+.hide-on-desktop{
+  @media (min-width: 840px) {
+    display: none;
+  }
+}
+
+.hide-on-tablet{
+  @media (min-width: 480px) and (max-width: 839px){
+    display: none;
+  }
+}
+
+.hide-on-phone{
+  @media (max-width: 479px){
+    display: none;
+  }
+}
+
+
+// scroll css
+  ::-webkit-scrollbar {
+    width: 10px;  /* 세로축 스크롤바 길이 */
+    height: 20px;  /* 가로축 스크롤바 길이 */
+  }
+  ::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0);
+  }
+  ::-webkit-scrollbar-track-piece {
+    background-color: rgba(0,0,0,0);
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.03);
+  }
+  ::-webkit-scrollbar-button {
+    background-color: rgba(0,0,0,0.1);
+    width: 20px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-button:start {
+    background-color: rgba(0,0,0,0.1); /* Top, Left 방향의 이동버튼 */
+  }
+  ::-webkit-scrollbar-button:end {
+    background-color: rgba(0,0,0,0.1); /* Bottom, Right 방향의 이동버튼 */
+  }
+  ::-webkit-scrollbar-corner {
+    background-color: rgba(0,0,0,0.1); /* 우측 하단의 코너 부분 */
+  }
+  ::-webkit-resizer {
+    background-color: rgba(0,0,0,0.1);
+  }
