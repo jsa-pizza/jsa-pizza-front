@@ -8,6 +8,8 @@ const apiServer = 'http://34.84.201.69:3000';
 // 4. signin, signup api
 // 5. my page api
 // 6. etc (좋아요, 댓글)
+// 7. admin
+
 
 // ------------------------------------------
 // 1. select page api
@@ -142,6 +144,13 @@ const postPizzaComments = (data, token) => (
     })
 );
 
+// ------------------------------------------
+// 7. admin
+// ------------------------------------------
+
+const dashboard = () => (
+  axios.get(`${apiServer}/admins/dashboard`)
+);
 
 export {
   getPizzaToppings,
@@ -157,4 +166,5 @@ export {
   myPageMain,
   getPizzaLike,
   postPizzaComments,
+  dashboard
 };
