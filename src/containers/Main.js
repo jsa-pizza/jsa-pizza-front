@@ -12,6 +12,7 @@ const ResultPageContainer = lazy(() => import('containers/ResultPageContainer'))
 const SelectPageContainer = lazy(() => import('containers/SelectPageContainer'));
 const MyPageContainer = lazy(() => import('containers/MyPageContainer'));
 const FeedbackContainer = lazy(() => import('containers/FeedbackContainer'));
+const AdminContainer = lazy(() => import('containers/AdminContainer'));
 
 const Main = () => (
   <Suspense fallback={<Dody />}>
@@ -23,6 +24,7 @@ const Main = () => (
       <Route path="/EventPage" component={EventList} />
       <Route path="/feedback" component={FeedbackContainer} />
       <Route path="/AboutUs" component={AboutUs} />
+      <AuthRoute path="/Admin" component={AdminContainer} />
     </Switch>
   </Suspense>
 );

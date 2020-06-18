@@ -8,3 +8,4 @@ export { default as SelectPageContainer } from './SelectPageContainer';
 export { default as FeedbackContainer } from './FeedbackContainer';
 export { default as AuthRouteContainer } from './AuthRouteContainer';
 export { default as NavContainer } from './NavContainer';
+export { default as AdminContainer } from './AdminContainer';
