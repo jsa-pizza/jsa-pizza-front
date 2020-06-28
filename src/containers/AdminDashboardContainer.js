@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect,useState } from 'react';
+import React, { useEffect,useState } from 'react';
 import AdminDashboard from '../components/AdminDashboard'
 import * as api from 'lib/api';
 

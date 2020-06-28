@@ -152,6 +152,9 @@ const dashboard = () => (
   axios.get(`${apiServer}/admins/dashboard`)
 );
 
+const topping = () => (
+  axios.get(`${apiServer}/admins/topping`)
+)
 export {
   getPizzaToppings,
   getPizzaToppingsImage,
@@ -166,5 +169,6 @@ export {
   myPageMain,
   getPizzaLike,
   postPizzaComments,
-  dashboard
+  dashboard,
+  topping
 };
